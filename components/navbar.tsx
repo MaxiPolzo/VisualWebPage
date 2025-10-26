@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
-import { Menu, X, LogIn } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navigation = [
@@ -60,17 +60,6 @@ export function Navbar() {
           {/* Right Side */}
           <div className="hidden md:flex items-center gap-4">
             <ModeToggle />
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="border-visualcraft-600 text-visualcraft-600 hover:bg-visualcraft-50 dark:border-visualcraft-400 dark:text-visualcraft-400 dark:hover:bg-visualcraft-950 bg-transparent"
-            >
-              <Link href="/login">
-                <LogIn className="w-4 h-4 mr-2" />
-                Acceso Clientes
-              </Link>
-            </Button>
             <Button asChild size="sm" className="bg-visualcraft-600 hover:bg-visualcraft-700 text-white shadow-lg">
               <Link href="/#contacto">Solicitar Presupuesto</Link>
             </Button>
@@ -105,17 +94,6 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="flex flex-col gap-2 px-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-                <Button
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className="w-full border-visualcraft-600 text-visualcraft-600 hover:bg-visualcraft-50 dark:border-visualcraft-400 dark:text-visualcraft-400 dark:hover:bg-visualcraft-950 bg-transparent"
-                >
-                  <Link href="/login">
-                    <LogIn className="w-4 h-4 mr-2" />
-                    Acceso Clientes
-                  </Link>
-                </Button>
                 <Button asChild size="sm" className="w-full bg-visualcraft-600 hover:bg-visualcraft-700 text-white">
                   <Link href="/#contacto">Solicitar Presupuesto</Link>
                 </Button>
